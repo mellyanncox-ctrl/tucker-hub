@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mon 8 June 2026 | Tucker Casuarina Marketing Plan</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+ --green:#7a9f7e;--green-d:#5f8163;--green-l:#93b596;
+ --cream:#faf8f4;--cream-d:#f1ede4;--ink:#2a2c28;--mid:#6f726a;
+ --rule:#e2ddd2;--terra:#e6855a;--lilac:#bc9dbe;--gold:#e9e0a5;--white:#fff;
+ --shadow:0 2px 14px rgba(122,159,126,.10);--shadow-l:0 10px 34px rgba(122,159,126,.18);
+}
+body{font-family:'League Spartan',-apple-system,sans-serif;background:var(--cream);color:var(--ink);
+ font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;display:flex;min-height:100vh}
+a{color:inherit;text-decoration:none}
+
+/* SIDEBAR */
+.sidebar{width:248px;flex-shrink:0;background:var(--green);color:var(--cream);
+ padding:30px 22px;position:sticky;top:0;height:100vh;overflow-y:auto}
+.sb-mark{font-size:11px;letter-spacing:.18em;text-transform:uppercase;opacity:.62;font-weight:500;margin-bottom:6px}
+.sb-brand{font-family:'League Spartan',sans-serif;font-weight:800;text-transform:uppercase;font-size:30px;line-height:1;letter-spacing:.02em;margin-bottom:3px}
+.sb-tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.6;font-weight:500;margin-bottom:30px}
+.sb-group{font-size:10px;letter-spacing:.16em;text-transform:uppercase;opacity:.5;font-weight:600;
+ margin:24px 0 10px;padding-bottom:7px;border-bottom:1px solid rgba(250,248,244,.14)}
+.sb-link{display:flex;justify-content:space-between;align-items:center;gap:8px;
+ padding:7px 10px;border-radius:8px;font-size:13.5px;font-weight:400;transition:background .18s;margin-bottom:1px}
+.sb-link:hover{background:rgba(250,248,244,.1)}
+.sb-link.active{background:rgba(250,248,244,.16);font-weight:600}
+.sb-pill{font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-radius:999px;
+ background:rgba(250,248,244,.14);font-weight:600;white-space:nowrap}
+.sb-pill.cur{background:var(--gold);color:var(--green-d)}
+.sb-more{font-size:12px;opacity:.55;padding:8px 10px;font-style:italic}
+
+/* MAIN */
+.main{flex:1;min-width:0}
+.wrap{max-width:760px;margin:0 auto;padding:0 32px 100px}
+
+/* HERO */
+.hero{padding:64px 0 40px;border-bottom:1px solid var(--rule);margin-bottom:8px}
+.hero .eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);
+ font-weight:600;margin-bottom:18px}
+.hero h1{font-family:'League Spartan',sans-serif;font-size:clamp(30px,5vw,46px);font-weight:700;
+ line-height:1.12;letter-spacing:-.01em;margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--green);font-weight:800}
+.hero p.lede{font-size:16px;color:var(--mid);max-width:62ch;line-height:1.6}
+.meta-row{display:flex;flex-wrap:wrap;gap:32px;margin-top:30px}
+.meta-row .m-lbl{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);
+ font-weight:600;margin-bottom:4px}
+.meta-row .m-val{font-size:14px;font-weight:500}
+.status-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--gold);
+ margin-right:7px;vertical-align:middle}
+
+/* SECTION */
+.section{padding:46px 0;border-bottom:1px solid var(--rule)}
+.sec-num{font-family:'League Spartan',sans-serif;font-weight:700;font-size:15px;letter-spacing:.06em;color:var(--terra);
+ display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.sec-num .line{flex:1;height:1px;background:var(--rule)}
+.sec-num .count{color:var(--mid);font-family:'League Spartan';font-size:11px;letter-spacing:.1em;
+ text-transform:uppercase;font-weight:600}
+.section h2{font-family:'League Spartan',sans-serif;font-size:28px;font-weight:700;margin-bottom:22px;letter-spacing:-.01em}
+
+/* OVERVIEW CARD */
+.ov-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);
+ border:1px solid var(--rule);border-radius:14px;overflow:hidden}
+.ov-cell{background:var(--white);padding:20px 22px}
+.ov-cell .k{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--mid);font-weight:600;margin-bottom:6px}
+.ov-cell .v{font-size:16px;font-weight:500;color:var(--ink)}
+.ov-cell.span{grid-column:1/-1}
+
+/* CONTENT CARDS */
+.card{background:var(--white);border:1px solid var(--rule);border-radius:14px;
+ overflow:hidden;box-shadow:var(--shadow);margin-bottom:18px}
+.card-head{display:flex;justify-content:space-between;align-items:center;
+ padding:16px 20px;border-bottom:1px solid var(--cream-d);background:var(--cream)}
+.card-head .ttl{font-weight:600;font-size:15px}
+.card-head .when{font-size:12px;color:var(--mid)}
+.tag{font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
+ padding:3px 9px;border-radius:999px;background:var(--green);color:var(--cream)}
+.tag.story{background:var(--terra)}
+.tag.web{background:var(--gold);color:var(--ink)}
+.tag.lilac{background:var(--lilac);color:var(--white)}
+.card-body{padding:20px}
+.img-slot{aspect-ratio:4/5;background:var(--cream-d);border:1.5px dashed var(--rule);
+ border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+ text-align:center;color:var(--mid);gap:5px;margin-bottom:16px;overflow:hidden}
+.img-slot.story{aspect-ratio:9/16;max-width:200px}
+.img-slot img{width:100%;height:100%;object-fit:cover}
+.img-slot .fname{font-weight:600;font-size:13px;color:var(--ink)}
+.img-slot .hint{font-size:11.5px}
+.img-slot .dim{font-family:'League Spartan';font-size:10px;letter-spacing:.05em;background:var(--white);
+ padding:2px 8px;border-radius:6px;border:1px solid var(--rule)}
+.fld{margin-bottom:14px}
+.fld:last-child{margin-bottom:0}
+.fld .k{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--mid);font-weight:600;margin-bottom:5px}
+.fld .v{font-size:14.5px;line-height:1.55;color:var(--ink);white-space:pre-wrap}
+.tbc{color:var(--mid);font-style:italic}
+
+/* STORIES GRID */
+.story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.story-cell{background:var(--white);border:1px solid var(--rule);border-radius:12px;
+ padding:14px;box-shadow:var(--shadow)}
+.story-cell .img-slot{margin-bottom:12px;max-width:none}
+.story-cell .s-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+ color:var(--terra);margin-bottom:5px}
+.story-cell .s-day{font-size:10px;color:var(--mid);text-transform:uppercase;letter-spacing:.1em;
+ font-weight:600;margin-bottom:8px}
+.story-cell .v{font-size:13px;line-height:1.5}
+
+/* SIGN-OFF */
+.signoff{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.btn{font-family:inherit;font-size:13px;font-weight:600;padding:11px 22px;border-radius:999px;
+ cursor:pointer;border:1px solid var(--green);transition:all .18s;letter-spacing:.02em}
+.btn-approve{background:var(--green);color:var(--cream)}
+.btn-approve:hover{background:var(--green-d)}
+.btn-changes{background:transparent;color:var(--green)}
+.btn-changes:hover{background:var(--cream-d)}
+.signoff-lbl{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--mid);
+ font-weight:600;margin-top:22px;margin-bottom:2px}
+
+/* HUB-SPECIFIC */
+.current-card{background:var(--green);color:var(--cream);border-radius:18px;padding:38px 40px;
+ box-shadow:var(--shadow-l);display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden}
+.current-card::after{content:'';position:absolute;right:-60px;top:-60px;width:200px;height:200px;
+ border-radius:50%;background:rgba(188,157,190,.28)}
+.current-card .cc-eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.current-card h3{font-family:'League Spartan',sans-serif;font-size:30px;font-weight:700}
+.current-card p{font-size:15px;opacity:.86;max-width:54ch}
+.current-card .cc-go{margin-top:8px;align-self:flex-start;background:var(--cream);color:var(--green-d);
+ padding:13px 26px;border-radius:999px;font-weight:600;font-size:14px}
+.upcoming-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.up-cell{background:var(--white);border:1px solid var(--rule);border-radius:12px;padding:18px 20px;
+ transition:all .18s;box-shadow:var(--shadow)}
+.up-cell:hover{transform:translateY(-2px);box-shadow:var(--shadow-l);border-color:var(--green-l)}
+.up-cell .d{font-weight:600;font-size:15px;margin-bottom:3px}
+.up-cell .s{font-size:11px;color:var(--mid);text-transform:uppercase;letter-spacing:.1em;font-weight:600}
+.empty{background:var(--white);border:1px dashed var(--rule);border-radius:12px;padding:26px;
+ text-align:center;color:var(--mid);font-style:italic;font-size:14px}
+
+@media(max-width:860px){
+ body{display:block}
+ .sidebar{width:100%;height:auto;position:static;padding:22px}
+ .sb-group{margin-top:18px}
+ .ov-grid,.upcoming-grid{grid-template-columns:1fr}
+ .story-grid{grid-template-columns:repeat(2,1fr)}
+ .wrap{padding:0 20px 80px}
+}
+@media(max-width:520px){.story-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<aside class="sidebar">
+  <div class="sb-mark">The Service Edit</div>
+  <div class="sb-brand">Tucker</div>
+  <div class="sb-tag">Casuarina</div>
+  <div class="sb-group">Overview</div>
+  <a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/index.html"><span>Home</span><span class="sb-pill">All weeks</span></a>
+  <div class="sb-group">Plan weeks</div>
+  <a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-05-18/index.html"><span>18 May</span><span class="sb-pill cur">Current</span></a><a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-05-25/index.html"><span>25 May</span><span class="sb-pill">Upcoming</span></a><a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-06-01/index.html"><span>1 Jun</span><span class="sb-pill">Upcoming</span></a><a class="sb-link active" href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-06-08/index.html"><span>8 Jun</span><span class="sb-pill">Upcoming</span></a><a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-06-15/index.html"><span>15 Jun</span><span class="sb-pill">Upcoming</span></a>
+  <div class="sb-more">+ 9 more weeks</div>
+</aside>
+<main class="main"><div class="wrap">
+<section class="hero">
+  <div class="eyebrow">Weekly marketing plan</div>
+  <h1>Week of <em>8 June 2026</em></h1>
+  <p class="lede">Instagram posts, stories and any other updates for review. Approve below or request changes and I'll turn them around.</p>
+  <div class="meta-row">
+    <div><div class="m-lbl">Prepared by</div><div class="m-val">The Service Edit</div></div>
+    <div><div class="m-lbl">Status</div><div class="m-val"><span class="status-dot"></span>Awaiting approval</div></div>
+    <div><div class="m-lbl">Approval contact</div><div class="m-val">hello@theserviceedit.com</div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="sec-num">01<span class="line"></span><span class="count">Overview</span></div>
+  <h2>Weekly Overview</h2>
+  <div class="ov-grid">
+    <div class="ov-cell"><div class="k">Week commencing</div><div class="v">8 June 2026</div></div>
+    <div class="ov-cell"><div class="k">Main focus this week</div><div class="v tbc">To confirm</div></div>
+    <div class="ov-cell"><div class="k">Key offer / special</div><div class="v tbc">To confirm</div></div>
+    <div class="ov-cell"><div class="k">Primary CTA</div><div class="v tbc">To confirm</div></div>
+    <div class="ov-cell span"><div class="k">Main customer message</div><div class="v tbc">To confirm</div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="sec-num">02<span class="line"></span><span class="count">2–3 this week</span></div>
+  <h2>Instagram Posts</h2>
+  <div class="card">
+      <div class="card-head"><div><div class="ttl">Post 1</div><div class="when">Scheduled: <span class="tbc">To confirm</span></div></div><span class="tag">Post / Carousel</span></div>
+      <div class="card-body">
+        <div class="img-slot "><div class="fname">+ ig-post-1.jpg</div><div class="hint">Drop the image into this folder</div></div>
+        <div class="hint" style="font-size:11.5px;color:var(--mid);margin:-8px 0 16px">Single image or carousel — add ig-post-1-a.jpg, -b.jpg etc. for multiple slides</div>
+        <div class="fld"><div class="k">Caption</div><div class="v tbc">To confirm</div></div>
+        <div class="fld"><div class="k">Hashtags / tags</div><div class="v tbc">To confirm</div></div>
+      </div></div><div class="card">
+      <div class="card-head"><div><div class="ttl">Post 2</div><div class="when">Scheduled: <span class="tbc">To confirm</span></div></div><span class="tag">Post / Carousel</span></div>
+      <div class="card-body">
+        <div class="img-slot "><div class="fname">+ ig-post-2.jpg</div><div class="hint">Drop the image into this folder</div></div>
+        <div class="hint" style="font-size:11.5px;color:var(--mid);margin:-8px 0 16px">Single image or carousel — add ig-post-2-a.jpg, -b.jpg etc. for multiple slides</div>
+        <div class="fld"><div class="k">Caption</div><div class="v tbc">To confirm</div></div>
+        <div class="fld"><div class="k">Hashtags / tags</div><div class="v tbc">To confirm</div></div>
+      </div></div><div class="card">
+      <div class="card-head"><div><div class="ttl">Post 3</div><div class="when">Scheduled: <span class="tbc">To confirm</span></div></div><span class="tag">Post / Carousel</span></div>
+      <div class="card-body">
+        <div class="img-slot "><div class="fname">+ ig-post-3.jpg</div><div class="hint">Drop the image into this folder</div></div>
+        <div class="hint" style="font-size:11.5px;color:var(--mid);margin:-8px 0 16px">Single image or carousel — add ig-post-3-a.jpg, -b.jpg etc. for multiple slides</div>
+        <div class="fld"><div class="k">Caption</div><div class="v tbc">To confirm</div></div>
+        <div class="fld"><div class="k">Hashtags / tags</div><div class="v tbc">To confirm</div></div>
+      </div></div>
+  <div class="signoff-lbl">Instagram posts sign-off</div>
+  <div class="signoff">
+    <a class="btn btn-changes" href="mailto:hello@theserviceedit.com?subject=Week%20of%208%20June%202026%20%7C%20Instagram%20posts%20%7C%20Request%20changes&body=Hi%20Mel,%0A%0ARe:%20Instagram%20posts%20for%20week%20of%208%20June%202026%0A%0A">Request changes</a>
+    <a class="btn btn-approve" href="mailto:hello@theserviceedit.com?subject=Week%20of%208%20June%202026%20%7C%20Instagram%20posts%20%7C%20Approve&body=Hi%20Mel,%0A%0ARe:%20Instagram%20posts%20for%20week%20of%208%20June%202026%0A%0A">Approve</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="sec-num">03<span class="line"></span><span class="count">6 this week</span></div>
+  <h2>Instagram Stories</h2>
+  <div class="story-grid"><div class="story-cell">
+        <div class="img-slot story"><div class="fname">+ ig-story-1.jpg</div><div class="dim">1080 × 1920</div></div>
+        <div class="s-lbl">Story 1</div>
+        <div class="s-day">Monday</div>
+        <div class="v tbc">To confirm</div>
+      </div><div class="story-cell">
+        <div class="img-slot story"><div class="fname">+ ig-story-2.jpg</div><div class="dim">1080 × 1920</div></div>
+        <div class="s-lbl">Story 2</div>
+        <div class="s-day">Tuesday</div>
+        <div class="v tbc">To confirm</div>
+      </div><div class="story-cell">
+        <div class="img-slot story"><div class="fname">+ ig-story-3.jpg</div><div class="dim">1080 × 1920</div></div>
+        <div class="s-lbl">Story 3</div>
+        <div class="s-day">Wednesday</div>
+        <div class="v tbc">To confirm</div>
+      </div><div class="story-cell">
+        <div class="img-slot story"><div class="fname">+ ig-story-4.jpg</div><div class="dim">1080 × 1920</div></div>
+        <div class="s-lbl">Story 4</div>
+        <div class="s-day">Thursday</div>
+        <div class="v tbc">To confirm</div>
+      </div><div class="story-cell">
+        <div class="img-slot story"><div class="fname">+ ig-story-5.jpg</div><div class="dim">1080 × 1920</div></div>
+        <div class="s-lbl">Story 5</div>
+        <div class="s-day">Friday</div>
+        <div class="v tbc">To confirm</div>
+      </div><div class="story-cell">
+        <div class="img-slot story"><div class="fname">+ ig-story-6.jpg</div><div class="dim">1080 × 1920</div></div>
+        <div class="s-lbl">Story 6</div>
+        <div class="s-day">Saturday</div>
+        <div class="v tbc">To confirm</div>
+      </div></div>
+  <div class="signoff-lbl">Instagram stories sign-off</div>
+  <div class="signoff">
+    <a class="btn btn-changes" href="mailto:hello@theserviceedit.com?subject=Week%20of%208%20June%202026%20%7C%20Instagram%20stories%20%7C%20Request%20changes&body=Hi%20Mel,%0A%0ARe:%20Instagram%20stories%20for%20week%20of%208%20June%202026%0A%0A">Request changes</a>
+    <a class="btn btn-approve" href="mailto:hello@theserviceedit.com?subject=Week%20of%208%20June%202026%20%7C%20Instagram%20stories%20%7C%20Approve&body=Hi%20Mel,%0A%0ARe:%20Instagram%20stories%20for%20week%20of%208%20June%202026%0A%0A">Approve</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="sec-num">04<span class="line"></span><span class="count">Optional</span></div>
+  <h2>Other Updates</h2>
+  <div class="card"><div class="card-head"><div class="ttl">Website / other</div><span class="tag web">Other</span></div>
+  <div class="card-body">
+    <div class="fld"><div class="k">What's changing</div><div class="v tbc">To confirm</div></div>
+    <div class="fld"><div class="k">Why</div><div class="v tbc">To confirm</div></div>
+    <div class="fld"><div class="k">Live date</div><div class="v tbc">To confirm</div></div>
+  </div></div>
+  <div class="signoff-lbl">Other updates sign-off</div>
+  <div class="signoff">
+    <a class="btn btn-changes" href="mailto:hello@theserviceedit.com?subject=Week%20of%208%20June%202026%20%7C%20Other%20updates%20%7C%20Request%20changes&body=Hi%20Mel,%0A%0ARe:%20Other%20updates%20for%20week%20of%208%20June%202026%0A%0A">Request changes</a>
+    <a class="btn btn-approve" href="mailto:hello@theserviceedit.com?subject=Week%20of%208%20June%202026%20%7C%20Other%20updates%20%7C%20Approve&body=Hi%20Mel,%0A%0ARe:%20Other%20updates%20for%20week%20of%208%20June%202026%0A%0A">Approve</a>
+  </div>
+</section>
+</div></main>
+</body>
+</html>
