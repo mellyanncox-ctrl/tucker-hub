@@ -88,6 +88,23 @@ a{color:inherit;text-decoration:none}
  text-align:center;color:var(--mid);gap:5px;margin-bottom:16px;overflow:hidden}
 .img-slot.story{aspect-ratio:9/16;max-width:200px}
 .img-slot img{width:100%;height:100%;object-fit:cover}
+.img-slot.has-img{border:1px solid var(--rule);background:var(--cream-d)}
+/* CAROUSEL */
+.carousel{position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--rule);background:var(--ink)}
+.ctrack{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch}
+.ctrack::-webkit-scrollbar{display:none}
+.cslide{flex:0 0 100%;scroll-snap-align:start;aspect-ratio:4/5}
+.cslide img{width:100%;height:100%;object-fit:cover;display:block}
+.cbtn{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;
+ border:none;background:rgba(255,255,255,.85);color:var(--ink);font-size:22px;line-height:1;cursor:pointer;
+ display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.2);transition:background .15s}
+.cbtn:hover{background:#fff}
+.cbtn.prev{left:10px}.cbtn.next{right:10px}
+.cdots{position:absolute;bottom:34px;left:0;right:0;display:flex;gap:6px;justify-content:center}
+.cdot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);transition:background .2s}
+.cdot.on{background:#fff}
+.ccount{position:absolute;bottom:8px;left:0;right:0;text-align:center;font-size:10px;letter-spacing:.08em;
+ text-transform:uppercase;color:rgba(255,255,255,.85);font-weight:600}
 .img-slot .fname{font-weight:600;font-size:13px;color:var(--ink)}
 .img-slot .hint{font-size:11.5px}
 .img-slot .dim{font-family:'League Spartan';font-size:10px;letter-spacing:.05em;background:var(--white);
@@ -189,25 +206,22 @@ a{color:inherit;text-decoration:none}
   <div class="sec-num">02<span class="line"></span><span class="count">2–3 this week</span></div>
   <h2>Instagram Posts</h2>
   <div class="card">
-      <div class="card-head"><div><div class="ttl">Post 1</div><div class="when">Scheduled: <span class="tbc">To confirm</span></div></div><span class="tag">Post / Carousel</span></div>
+      <div class="card-head"><div><div class="ttl">Post 1</div><div class="when">Scheduled: <span class="tbc">To confirm</span></div></div><span class="tag">Carousel</span></div>
       <div class="card-body">
-        <div class="img-slot "><div class="fname">+ ig-post-1.jpg</div><div class="hint">Drop the image into this folder</div></div>
-        <div class="hint" style="font-size:11.5px;color:var(--mid);margin:-8px 0 16px">Single image or carousel — add ig-post-1-a.jpg, -b.jpg etc. for multiple slides</div>
-        <div class="fld"><div class="k">Caption</div><div class="v tbc">To confirm</div></div>
+        <div class="carousel" data-count="5">
+          <div class="ctrack"><div class="cslide"><img src="ig-post-1-1.png" alt="Post 1 slide 1" loading="lazy"></div><div class="cslide"><img src="ig-post-1-2.png" alt="Post 1 slide 2" loading="lazy"></div><div class="cslide"><img src="ig-post-1-3.png" alt="Post 1 slide 3" loading="lazy"></div><div class="cslide"><img src="ig-post-1-4.png" alt="Post 1 slide 4" loading="lazy"></div><div class="cslide"><img src="ig-post-1-5.png" alt="Post 1 slide 5" loading="lazy"></div></div>
+          <button class="cbtn prev" aria-label="Previous">‹</button>
+          <button class="cbtn next" aria-label="Next">›</button>
+          <div class="cdots"><span class="cdot on"></span><span class="cdot"></span><span class="cdot"></span><span class="cdot"></span><span class="cdot"></span></div>
+          <div class="ccount">Carousel · 5 slides</div>
+        </div>
+        <div class="fld" style="margin-top:16px"><div class="k">Caption</div><div class="v tbc">To confirm</div></div>
         <div class="fld"><div class="k">Hashtags / tags</div><div class="v tbc">To confirm</div></div>
       </div></div><div class="card">
-      <div class="card-head"><div><div class="ttl">Post 2</div><div class="when">Scheduled: <span class="tbc">To confirm</span></div></div><span class="tag">Post / Carousel</span></div>
+      <div class="card-head"><div><div class="ttl">Post 2</div><div class="when">Scheduled: <span class="tbc">To confirm</span></div></div><span class="tag">Post</span></div>
       <div class="card-body">
-        <div class="img-slot "><div class="fname">+ ig-post-2.jpg</div><div class="hint">Drop the image into this folder</div></div>
-        <div class="hint" style="font-size:11.5px;color:var(--mid);margin:-8px 0 16px">Single image or carousel — add ig-post-2-a.jpg, -b.jpg etc. for multiple slides</div>
-        <div class="fld"><div class="k">Caption</div><div class="v tbc">To confirm</div></div>
-        <div class="fld"><div class="k">Hashtags / tags</div><div class="v tbc">To confirm</div></div>
-      </div></div><div class="card">
-      <div class="card-head"><div><div class="ttl">Post 3</div><div class="when">Scheduled: <span class="tbc">To confirm</span></div></div><span class="tag">Post / Carousel</span></div>
-      <div class="card-body">
-        <div class="img-slot "><div class="fname">+ ig-post-3.jpg</div><div class="hint">Drop the image into this folder</div></div>
-        <div class="hint" style="font-size:11.5px;color:var(--mid);margin:-8px 0 16px">Single image or carousel — add ig-post-3-a.jpg, -b.jpg etc. for multiple slides</div>
-        <div class="fld"><div class="k">Caption</div><div class="v tbc">To confirm</div></div>
+        <div class="img-slot has-img"><img src="ig-post-2-1.png" alt="Post 2" loading="lazy"></div>
+        <div class="fld" style="margin-top:16px"><div class="k">Caption</div><div class="v tbc">To confirm</div></div>
         <div class="fld"><div class="k">Hashtags / tags</div><div class="v tbc">To confirm</div></div>
       </div></div>
   <div class="signoff-lbl">Instagram posts sign-off</div>
@@ -221,32 +235,38 @@ a{color:inherit;text-decoration:none}
   <div class="sec-num">03<span class="line"></span><span class="count">6 this week</span></div>
   <h2>Instagram Stories</h2>
   <div class="story-grid"><div class="story-cell">
-        <div class="img-slot story"><div class="fname">+ ig-story-1.jpg</div><div class="dim">1080 × 1920</div></div>
+        <div class="img-slot story has-img"><img src="ig-story-1.png" alt="Story 1" loading="lazy"
+          onerror="this.parentNode.classList.remove('has-img');this.parentNode.innerHTML='&lt;div class=\'fname\'&gt;+ ig-story-1.png&lt;/div&gt;&lt;div class=\'dim\'&gt;1080 × 1920&lt;/div&gt;'"></div>
         <div class="s-lbl">Story 1</div>
         <div class="s-day">Monday</div>
         <div class="v tbc">To confirm</div>
       </div><div class="story-cell">
-        <div class="img-slot story"><div class="fname">+ ig-story-2.jpg</div><div class="dim">1080 × 1920</div></div>
+        <div class="img-slot story has-img"><img src="ig-story-2.png" alt="Story 2" loading="lazy"
+          onerror="this.parentNode.classList.remove('has-img');this.parentNode.innerHTML='&lt;div class=\'fname\'&gt;+ ig-story-2.png&lt;/div&gt;&lt;div class=\'dim\'&gt;1080 × 1920&lt;/div&gt;'"></div>
         <div class="s-lbl">Story 2</div>
         <div class="s-day">Tuesday</div>
         <div class="v tbc">To confirm</div>
       </div><div class="story-cell">
-        <div class="img-slot story"><div class="fname">+ ig-story-3.jpg</div><div class="dim">1080 × 1920</div></div>
+        <div class="img-slot story has-img"><img src="ig-story-3.png" alt="Story 3" loading="lazy"
+          onerror="this.parentNode.classList.remove('has-img');this.parentNode.innerHTML='&lt;div class=\'fname\'&gt;+ ig-story-3.png&lt;/div&gt;&lt;div class=\'dim\'&gt;1080 × 1920&lt;/div&gt;'"></div>
         <div class="s-lbl">Story 3</div>
         <div class="s-day">Wednesday</div>
         <div class="v tbc">To confirm</div>
       </div><div class="story-cell">
-        <div class="img-slot story"><div class="fname">+ ig-story-4.jpg</div><div class="dim">1080 × 1920</div></div>
+        <div class="img-slot story has-img"><img src="ig-story-4.png" alt="Story 4" loading="lazy"
+          onerror="this.parentNode.classList.remove('has-img');this.parentNode.innerHTML='&lt;div class=\'fname\'&gt;+ ig-story-4.png&lt;/div&gt;&lt;div class=\'dim\'&gt;1080 × 1920&lt;/div&gt;'"></div>
         <div class="s-lbl">Story 4</div>
         <div class="s-day">Thursday</div>
         <div class="v tbc">To confirm</div>
       </div><div class="story-cell">
-        <div class="img-slot story"><div class="fname">+ ig-story-5.jpg</div><div class="dim">1080 × 1920</div></div>
+        <div class="img-slot story has-img"><img src="ig-story-5.png" alt="Story 5" loading="lazy"
+          onerror="this.parentNode.classList.remove('has-img');this.parentNode.innerHTML='&lt;div class=\'fname\'&gt;+ ig-story-5.png&lt;/div&gt;&lt;div class=\'dim\'&gt;1080 × 1920&lt;/div&gt;'"></div>
         <div class="s-lbl">Story 5</div>
         <div class="s-day">Friday</div>
         <div class="v tbc">To confirm</div>
       </div><div class="story-cell">
-        <div class="img-slot story"><div class="fname">+ ig-story-6.jpg</div><div class="dim">1080 × 1920</div></div>
+        <div class="img-slot story has-img"><img src="ig-story-6.png" alt="Story 6" loading="lazy"
+          onerror="this.parentNode.classList.remove('has-img');this.parentNode.innerHTML='&lt;div class=\'fname\'&gt;+ ig-story-6.png&lt;/div&gt;&lt;div class=\'dim\'&gt;1080 × 1920&lt;/div&gt;'"></div>
         <div class="s-lbl">Story 6</div>
         <div class="s-day">Saturday</div>
         <div class="v tbc">To confirm</div>
@@ -274,5 +294,19 @@ a{color:inherit;text-decoration:none}
   </div>
 </section>
 </div></main>
+<script>
+document.querySelectorAll('.carousel').forEach(function(c){
+  var track=c.querySelector('.ctrack'),dots=c.querySelectorAll('.cdot'),
+      slides=c.querySelectorAll('.cslide');
+  function go(dir){track.scrollBy({left:dir*track.clientWidth,behavior:'smooth'});}
+  var p=c.querySelector('.prev'),n=c.querySelector('.next');
+  if(p)p.addEventListener('click',function(){go(-1);});
+  if(n)n.addEventListener('click',function(){go(1);});
+  track.addEventListener('scroll',function(){
+    var idx=Math.round(track.scrollLeft/track.clientWidth);
+    dots.forEach(function(d,i){d.classList.toggle('on',i===idx);});
+  });
+});
+</script>
 </body>
 </html>
