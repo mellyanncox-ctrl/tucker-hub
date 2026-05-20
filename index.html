@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tucker Casuarina Marketing Plan Hub</title>
+<link rel="manifest" href="https://mellyanncox-ctrl.github.io/tucker-hub/manifest.json">
+<link rel="apple-touch-icon" href="https://mellyanncox-ctrl.github.io/tucker-hub/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="https://mellyanncox-ctrl.github.io/tucker-hub/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="tucker-hub">
+<meta name="theme-color" content="#7a9f7e">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800&display=swap');
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -88,6 +95,34 @@ a{color:inherit;text-decoration:none}
  text-align:center;color:var(--mid);gap:5px;margin-bottom:16px;overflow:hidden}
 .img-slot.story{aspect-ratio:9/16;max-width:200px}
 .img-slot img{width:100%;height:100%;object-fit:cover}
+.img-slot.has-img{border:1px solid var(--rule);background:var(--cream-d)}
+/* CAROUSEL */
+.carousel{position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--rule);background:var(--ink)}
+.ctrack{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch}
+.ctrack::-webkit-scrollbar{display:none}
+.cslide{flex:0 0 100%;scroll-snap-align:start;aspect-ratio:4/5}
+.cslide img{width:100%;height:100%;object-fit:cover;display:block}
+.cbtn{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;
+ border:none;background:rgba(255,255,255,.85);color:var(--ink);font-size:22px;line-height:1;cursor:pointer;
+ display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.2);transition:background .15s}
+.cbtn:hover{background:#fff}
+.cbtn.prev{left:10px}.cbtn.next{right:10px}
+.cdots{position:absolute;bottom:34px;left:0;right:0;display:flex;gap:6px;justify-content:center}
+.cdot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);transition:background .2s}
+.cdot.on{background:#fff}
+.ccount{position:absolute;bottom:8px;left:0;right:0;text-align:center;font-size:10px;letter-spacing:.08em;
+ text-transform:uppercase;color:rgba(255,255,255,.85);font-weight:600}
+/* VIDEO + DOWNLOAD */
+.img-slot.story video{width:100%;height:100%;object-fit:cover;display:block;background:#000}
+.dlrow{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.dlbtn{display:inline-flex;align-items:center;gap:4px;font-family:'League Spartan',sans-serif;
+ font-size:12px;font-weight:600;letter-spacing:.02em;padding:7px 14px;border-radius:999px;
+ background:var(--green);color:var(--cream);border:1px solid var(--green);cursor:pointer;
+ transition:background .15s;text-decoration:none}
+.dlbtn:hover{background:var(--green-d)}
+.slide-dl{position:absolute;bottom:10px;right:10px;background:rgba(31,55,39,.82);padding:5px 11px;
+ font-size:11px;z-index:2;border-color:transparent}
+.cslide{position:relative}
 .img-slot .fname{font-weight:600;font-size:13px;color:var(--ink)}
 .img-slot .hint{font-size:11.5px}
 .img-slot .dim{font-family:'League Spartan';font-size:10px;letter-spacing:.05em;background:var(--white);
@@ -192,5 +227,69 @@ a{color:inherit;text-decoration:none}
   <div class="upcoming-grid"><a class="up-cell" href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-05-25/index.html"><div class="d">Mon 25 May 2026</div><div class="s">Awaiting plan</div></a><a class="up-cell" href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-06-01/index.html"><div class="d">Mon 1 June 2026</div><div class="s">Awaiting plan</div></a><a class="up-cell" href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-06-08/index.html"><div class="d">Mon 8 June 2026</div><div class="s">Awaiting plan</div></a><a class="up-cell" href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-06-15/index.html"><div class="d">Mon 15 June 2026</div><div class="s">Awaiting plan</div></a><a class="up-cell" href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-06-22/index.html"><div class="d">Mon 22 June 2026</div><div class="s">Awaiting plan</div></a><a class="up-cell" href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-06-29/index.html"><div class="d">Mon 29 June 2026</div><div class="s">Awaiting plan</div></a><a class="up-cell" href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-07-06/index.html"><div class="d">Mon 6 July 2026</div><div class="s">Awaiting plan</div></a><a class="up-cell" href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-07-13/index.html"><div class="d">Mon 13 July 2026</div><div class="s">Awaiting plan</div></a><a class="up-cell" href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-07-20/index.html"><div class="d">Mon 20 July 2026</div><div class="s">Awaiting plan</div></a><a class="up-cell" href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-07-27/index.html"><div class="d">Mon 27 July 2026</div><div class="s">Awaiting plan</div></a><a class="up-cell" href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-08-03/index.html"><div class="d">Mon 3 August 2026</div><div class="s">Awaiting plan</div></a><a class="up-cell" href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-08-10/index.html"><div class="d">Mon 10 August 2026</div><div class="s">Awaiting plan</div></a><a class="up-cell" href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-08-17/index.html"><div class="d">Mon 17 August 2026</div><div class="s">Awaiting plan</div></a></div>
 </section>
 </div></main>
+<script>
+function imgExists(src){
+  return new Promise(function(res){
+    var im=new Image();
+    im.onload=function(){res(true);};
+    im.onerror=function(){res(false);};
+    im.src=src;
+  });
+}
+(async function(){
+  var anyPost=false;
+  var cards=document.querySelectorAll('.post-card');
+  for(var ci=0; ci<cards.length; ci++){
+    var card=cards[ci];
+    var carousel=card.querySelector('.carousel');
+    var track=carousel.querySelector('.ctrack');
+    var slides=Array.prototype.slice.call(track.querySelectorAll('.cslide'));
+    var present=[];
+    for(var si=0; si<slides.length; si++){
+      var src=slides[si].getAttribute('data-img');
+      var ok=await imgExists(src);
+      if(ok){present.push(slides[si]);}else{slides[si].remove();}
+    }
+    if(present.length===0){ card.remove(); continue; }
+    anyPost=true;
+    card.style.display='';
+    var dotArr=Array.prototype.slice.call(carousel.querySelectorAll('.cdot'));
+    for(var di=dotArr.length-1; di>=present.length; di--){ dotArr[di].remove(); }
+    var tag=card.querySelector('[data-tag]');
+    var ccount=carousel.querySelector('.ccount');
+    var prev=carousel.querySelector('.prev'),next=carousel.querySelector('.next');
+    var dotsWrap=carousel.querySelector('.cdots');
+    var dlrow=card.querySelector('[data-dlrow]');
+    if(present.length===1){
+      tag.textContent='Post';
+      if(prev)prev.remove(); if(next)next.remove();
+      if(dotsWrap)dotsWrap.remove(); if(ccount)ccount.remove();
+      var sd=present[0].querySelector('.slide-dl'); if(sd)sd.remove();
+      dlrow.innerHTML='<a class="dlbtn" href="'+present[0].getAttribute('data-img')+'" download>↓ Download image</a>';
+    } else {
+      tag.textContent='Carousel';
+      ccount.textContent='Carousel · '+present.length+' slides';
+      var html='';
+      for(var k=0;k<present.length;k++){
+        html+='<a class="dlbtn" href="'+present[k].getAttribute('data-img')+'" download>↓ Slide '+(k+1)+'</a>';
+      }
+      dlrow.innerHTML=html;
+    }
+  }
+  if(!anyPost){ document.getElementById('no-posts').style.display='block'; }
+})();
+document.querySelectorAll('.carousel').forEach(function(c){
+  var track=c.querySelector('.ctrack');
+  function go(dir){track.scrollBy({left:dir*track.clientWidth,behavior:'smooth'});}
+  var p=c.querySelector('.prev'),n=c.querySelector('.next');
+  if(p)p.addEventListener('click',function(){go(-1);});
+  if(n)n.addEventListener('click',function(){go(1);});
+  track.addEventListener('scroll',function(){
+    var dots=c.querySelectorAll('.cdot');
+    var idx=Math.round(track.scrollLeft/track.clientWidth);
+    dots.forEach(function(d,i){d.classList.toggle('on',i===idx);});
+  });
+});
+</script>
 </body>
 </html>
