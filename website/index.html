@@ -148,6 +148,29 @@ a{color:inherit;text-decoration:none}
 .scope-item .si-ttl{font-weight:600;font-size:14px;margin-bottom:2px}
 .scope-item .si-sub{font-size:12px;color:var(--mid);line-height:1.4}
 .cc-go.ghost{background:rgba(250,248,244,.18);color:var(--cream);border:1px solid rgba(250,248,244,.4)}
+.opts{display:grid;grid-template-columns:1fr;gap:16px;margin-top:6px}
+.opt{background:var(--white);border:1px solid var(--rule);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.opt.rec{border-color:var(--green-l);box-shadow:var(--shadow-l)}
+.opt-thumb{position:relative;height:186px;overflow:hidden;background:var(--cream-d);border-bottom:1px solid var(--rule)}
+.opt-thumb iframe{width:1280px;height:860px;border:0;transform:scale(.30);transform-origin:top left;pointer-events:none}
+.opt-open{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:flex-end;padding:10px;text-decoration:none;background:linear-gradient(rgba(0,0,0,0) 62%,rgba(0,0,0,.05))}
+.opt-open span{background:var(--green);color:var(--cream);font-size:11px;font-weight:700;letter-spacing:.03em;padding:7px 13px;border-radius:999px;box-shadow:var(--shadow)}
+.opt-badge{position:absolute;top:12px;left:12px;z-index:2;background:var(--gold);color:var(--green-d);font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.opt-body{padding:20px 22px;display:flex;flex-direction:column;flex:1}
+.opt-eyebrow{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--terra);font-weight:700;margin-bottom:6px}
+.opt-name{font-family:'League Spartan',sans-serif;font-size:21px;font-weight:700;margin-bottom:4px}
+.opt-best{font-size:12px;color:var(--mid);font-weight:600;margin-bottom:13px}
+.opt-why{list-style:none;margin:0 0 16px;padding:0}
+.opt-why li{position:relative;padding-left:18px;font-size:13.5px;line-height:1.5;color:var(--ink);margin-bottom:7px}
+.opt-why li::before{content:'';position:absolute;left:0;top:7px;width:7px;height:7px;border-radius:50%;background:var(--green)}
+.opt-actions{margin-top:auto;display:flex;gap:8px;flex-wrap:wrap}
+.opt-actions a{font-size:12px;font-weight:600;letter-spacing:.02em;padding:9px 16px;border-radius:999px;text-decoration:none;transition:all .15s}
+.opt-open2{background:transparent;color:var(--green);border:1px solid var(--green)}
+.opt-open2:hover{background:var(--cream-d)}
+.opt-pick{background:var(--green);color:var(--cream);border:1px solid var(--green)}
+.opt-pick:hover{background:var(--green-d)}
+.rec-note{background:var(--cream);border:1px solid var(--rule);border-left:3px solid var(--green);border-radius:10px;padding:14px 16px;font-size:13.5px;color:var(--ink);line-height:1.55;margin-top:20px}
+@media(min-width:760px){.opts{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:860px){.scope-grid{grid-template-columns:1fr}}
 </style>
 </head>
@@ -211,26 +234,87 @@ a{color:inherit;text-decoration:none}
 </section>
 
 <section class="section">
-  <div class="sec-num">02<span class="line"></span><span class="count">Preview</span></div>
-  <h2>See it come together</h2>
-  <a href="preview/index.html" style="display:block">
-    <div class="current-card">
-      <div class="cc-eyebrow">Live preview · First draft</div>
-      <h3>Preview the new site</h3>
-      <p>The first full draft is ready to click through — homepage, menu, about, group bookings and gift vouchers. Best viewed on your phone. Have a look and let us know your thoughts below.</p>
-      <span class="cc-go">Open the live preview →</span>
+  <div class="sec-num">02<span class="line"></span><span class="count">Your choice</span></div>
+  <h2>Choose your homepage</h2>
+  <p style="color:var(--mid);font-size:14.5px;max-width:62ch;margin:-8px 0 22px;line-height:1.6">We've designed three directions for the homepage. Same pages and content sit behind each — it's the feel and focus that differ. Click through all three (best on your phone), then hit <strong>“This is the one”</strong> under your favourite. The other pages — menu, about, bookings, gift vouchers — are shared across all three and linked at the bottom.</p>
+  <div class="opts">
+
+    <!-- OPTION A -->
+    <div class="opt">
+      <div class="opt-thumb">
+        <iframe src="preview/index.html" loading="lazy" scrolling="no" title="Option A homepage preview"></iframe>
+        <a class="opt-open" href="preview/index.html" target="_blank" rel="noopener"><span>Open full →</span></a>
+      </div>
+      <div class="opt-body">
+        <div class="opt-eyebrow">Option A · “Your new local”</div>
+        <div class="opt-name">The brand one</div>
+        <div class="opt-best">Best if you want it to feel like a beautiful magazine.</div>
+        <ul class="opt-why">
+          <li>Leads with big photography and warmth — the most premium feel.</li>
+          <li>A live Instagram gallery keeps it fresh and shows off the vibe.</li>
+          <li>Puts your brand and the community front and centre.</li>
+        </ul>
+        <div class="opt-actions">
+          <a class="opt-open2" href="preview/index.html" target="_blank" rel="noopener">Preview</a>
+          <a class="opt-pick" href="mailto:hello@theserviceedit.com?subject=New%20Tucker%20website%20%7C%20Homepage%20Option%20A%20%7C%20This%20is%20the%20one&body=Hi%20Mel%2C%0A%0AWe%27d%20like%20to%20go%20with%20Option%20A%20for%20the%20homepage.%0A%0APhil%20%26%20Dale%0A">This is the one</a>
+        </div>
+      </div>
     </div>
-  </a>
-  <div class="dlrow" style="margin-top:14px">
-    <a class="dlbtn" href="preview/menu.html">Menu</a>
+
+    <!-- OPTION B (recommended) -->
+    <div class="opt rec">
+      <div class="opt-thumb">
+        <div class="opt-badge">Our pick</div>
+        <iframe src="preview/index-v2.html" loading="lazy" scrolling="no" title="Option B homepage preview"></iframe>
+        <a class="opt-open" href="preview/index-v2.html" target="_blank" rel="noopener"><span>Open full →</span></a>
+      </div>
+      <div class="opt-body">
+        <div class="opt-eyebrow">Option B · “The whole street's already here”</div>
+        <div class="opt-name">The order-driver</div>
+        <div class="opt-best">Best if the goal is more pickup orders.</div>
+        <ul class="opt-why">
+          <li>A live “Open now” badge so people instantly know you're open.</li>
+          <li>A big Order button up top, with the menu built right into the page.</li>
+          <li>Designed to turn a visit into an order — does the most of the three.</li>
+        </ul>
+        <div class="opt-actions">
+          <a class="opt-open2" href="preview/index-v2.html" target="_blank" rel="noopener">Preview</a>
+          <a class="opt-pick" href="mailto:hello@theserviceedit.com?subject=New%20Tucker%20website%20%7C%20Homepage%20Option%20B%20%7C%20This%20is%20the%20one&body=Hi%20Mel%2C%0A%0AWe%27d%20like%20to%20go%20with%20Option%20B%20for%20the%20homepage.%0A%0APhil%20%26%20Dale%0A">This is the one</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPTION C -->
+    <div class="opt">
+      <div class="opt-thumb">
+        <iframe src="preview/index-v3.html" loading="lazy" scrolling="no" title="Option C homepage preview"></iframe>
+        <a class="opt-open" href="preview/index-v3.html" target="_blank" rel="noopener"><span>Open full →</span></a>
+      </div>
+      <div class="opt-body">
+        <div class="opt-eyebrow">Option C · “You're already here”</div>
+        <div class="opt-name">The all-rounder</div>
+        <div class="opt-best">Best for personality with everything in reach.</div>
+        <ul class="opt-why">
+          <li>Bold and full of character, with a photo of you two.</li>
+          <li>Your hours right up top — answers “are you open?” fast.</li>
+          <li>Quick links for group bookings and gift vouchers.</li>
+        </ul>
+        <div class="opt-actions">
+          <a class="opt-open2" href="preview/index-v3.html" target="_blank" rel="noopener">Preview</a>
+          <a class="opt-pick" href="mailto:hello@theserviceedit.com?subject=New%20Tucker%20website%20%7C%20Homepage%20Option%20C%20%7C%20This%20is%20the%20one&body=Hi%20Mel%2C%0A%0AWe%27d%20like%20to%20go%20with%20Option%20C%20for%20the%20homepage.%0A%0APhil%20%26%20Dale%0A">This is the one</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="rec-note"><strong>Our recommendation — Option B.</strong> A café website earns its keep by turning visitors into orders, and B does the most of the three: a live open/closed badge, one clear Order button, and the menu built into the page. That said, all three are fully built and ready — the call is yours.</div>
+
+  <div class="dlrow" style="margin-top:22px">
+    <a class="dlbtn" href="preview/menu.html">Shared: Menu</a>
     <a class="dlbtn" href="preview/about.html">About</a>
     <a class="dlbtn" href="preview/bookings.html">Group bookings</a>
     <a class="dlbtn" href="preview/gift-vouchers.html">Gift vouchers</a>
-  </div>
-  <div class="signoff-lbl">Design sign-off</div>
-  <div class="signoff">
-    <a class="btn btn-changes" href="mailto:hello@theserviceedit.com?subject=New%20Tucker%20website%20%7C%20Design%20%7C%20Request%20changes&body=Hi%20Mel,%0A%0ARe:%20the%20new%20Tucker%20website%0A%0A">Request changes</a>
-    <a class="btn btn-approve" href="mailto:hello@theserviceedit.com?subject=New%20Tucker%20website%20%7C%20Design%20%7C%20Approve&body=Hi%20Mel,%0A%0ARe:%20the%20new%20Tucker%20website%0A%0A">Approve</a>
   </div>
 </section>
 
