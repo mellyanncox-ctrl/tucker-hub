@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Menu — Tucker Casuarina</title>
-<meta name="description" content="The Tucker Casuarina menu — brunch favourites, burgers and all-day bites. Order ahead on me&u or walk in, open seven days at The Commons, Casuarina NSW.">
+<meta name="description" content="The full Tucker Casuarina menu — breakfast, all-day brunch, lunch, little tucker, Loma coffee, cold-pressed juice, smoothies and more. Order ahead on me&u, open seven days at The Commons, Casuarina NSW.">
 <link rel="canonical" href="https://www.tuckercasuarina.com/menu">
 <!-- Open Graph / social -->
 <meta property="og:type" content="website">
@@ -315,23 +315,42 @@
   .hero-btns  { animation: fadeUp 0.5s ease 0.24s both; }
 
   /* ── MENU PAGE ── */
-  .menu-hero { background: var(--green); padding: 3.75rem 2rem 3.25rem; text-align: center; }
-  .menu-hero .hero-eye { color: rgba(255,255,255,0.6); }
-  .menu-hero h1 { font-size: clamp(2.4rem,7vw,4rem); font-weight:900; letter-spacing:0.04em; text-transform:uppercase; color:var(--white); line-height:1; }
+  .menu-hero { background: var(--green); padding: 3.5rem 2rem 3rem; text-align: center; }
+  .menu-hero .hero-eye { color: rgba(255,255,255,0.62); }
+  .menu-hero h1 { font-size: clamp(2.3rem,7vw,3.8rem); font-weight:900; letter-spacing:0.04em; text-transform:uppercase; color:var(--white); line-height:1; }
   .menu-hero h1 span { color: var(--yellow); }
-  .menu-hero p { font-size:14px; color:rgba(255,255,255,0.8); max-width:460px; margin:1rem auto 0; font-weight:300; line-height:1.7; }
-  .menu-wrap { max-width: 840px; margin: 0 auto; padding: 3.5rem 2rem 1rem; }
-  .menu-cat { margin-bottom: 3rem; }
-  .menu-cat-h { display:flex; align-items:center; gap:0.9rem; font-size:11px; font-weight:800; letter-spacing:0.18em; text-transform:uppercase; color:var(--green); margin-bottom:1rem; }
-  .menu-cat-h::after { content:""; flex:1; height:1px; background:rgba(0,0,0,0.1); }
-  .menu-item { display:flex; justify-content:space-between; gap:1.5rem; padding:1.05rem 0; border-bottom:1px solid rgba(0,0,0,0.07); }
+  .menu-hero p { font-size:13.5px; color:rgba(255,255,255,0.8); max-width:440px; margin:0.9rem auto 1.5rem; font-weight:300; line-height:1.7; }
+  .menu-hero .btn-orange { padding:0.85rem 2rem; }
+  .menu-hours { background: var(--black); color: rgba(255,255,255,0.72); text-align:center; font-size:12px; padding:0.8rem 1rem; font-weight:300; }
+  .menu-hours strong { color:#fff; font-weight:800; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; }
+  /* chip jump nav */
+  .menu-jump { border-bottom:1px solid rgba(0,0,0,0.08); overflow-x:auto; -webkit-overflow-scrolling:touch; background:var(--white); }
+  .menu-jump-inner { display:flex; gap:0.4rem; max-width:900px; margin:0 auto; padding:0.75rem 1.25rem; white-space:nowrap; }
+  .menu-jump a { font-size:11px; font-weight:800; letter-spacing:0.06em; text-transform:uppercase; color:var(--black); text-decoration:none; padding:0.4rem 0.8rem; border-radius:999px; border:1px solid rgba(0,0,0,0.12); transition:all 0.15s; }
+  .menu-jump a:hover { background:var(--green); color:var(--white); border-color:var(--green); }
+  /* legend */
+  .menu-legend { max-width:840px; margin:0 auto; padding:1.75rem 2rem 0; display:flex; flex-wrap:wrap; gap:0.75rem 1.25rem; font-size:11px; color:rgba(0,0,0,0.5); font-weight:600; }
+  .menu-legend b { color:var(--black); font-weight:800; }
+  .diet { display:inline-block; font-size:8.5px; font-weight:800; letter-spacing:0.04em; padding:2px 5px; border-radius:3px; margin-left:6px; vertical-align:middle; border:1px solid currentColor; line-height:1; }
+  .diet.v{ color:var(--green); } .diet.ve{ color:#5f8a2c; } .diet.gf{ color:var(--orange); } .diet.df{ color:#9b7d9e; }
+  .menu-wrap { max-width: 840px; margin: 0 auto; padding: 2rem 2rem 1rem; }
+  .menu-cat { margin-bottom: 2.75rem; scroll-margin-top: 1rem; }
+  .menu-cat-h { display:flex; align-items:baseline; gap:0.75rem; margin-bottom:1rem; }
+  .menu-cat-h .h { font-size:1.4rem; font-weight:900; letter-spacing:0.03em; text-transform:uppercase; color:var(--black); }
+  .menu-cat-h .when { font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--green); }
+  .menu-item { display:flex; justify-content:space-between; gap:1.5rem; padding:0.95rem 0; border-bottom:1px solid rgba(0,0,0,0.07); }
   .menu-item:last-child { border-bottom:none; }
-  .mi-name { font-weight:800; text-transform:uppercase; letter-spacing:0.05em; font-size:13.5px; color:var(--black); }
-  .mi-desc { font-size:13px; color:rgba(0,0,0,0.5); margin-top:4px; font-weight:300; line-height:1.65; max-width:62ch; }
-  .mi-price { font-weight:900; color:var(--green); font-size:16px; white-space:nowrap; }
-  .menu-note { background:#faf8ec; border-radius:6px; padding:1.1rem 1.3rem; font-size:12.5px; color:rgba(0,0,0,0.6); line-height:1.7; font-weight:300; max-width:840px; margin:0 auto; }
-  .menu-note strong { color:var(--black); font-weight:800; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; }
-  .menu-cta { text-align:center; padding: 2.5rem 2rem 4.5rem; }
+  .mi-name { font-weight:800; text-transform:uppercase; letter-spacing:0.04em; font-size:13.5px; color:var(--black); }
+  .mi-desc { font-size:12.5px; color:rgba(0,0,0,0.5); margin-top:4px; font-weight:300; line-height:1.6; max-width:60ch; }
+  .mi-add { font-size:11px; color:var(--green); font-weight:700; margin-top:5px; letter-spacing:0.02em; }
+  .mi-price { font-weight:900; color:var(--green); font-size:15px; white-space:nowrap; }
+  .menu-mini { display:grid; grid-template-columns:repeat(2,1fr); gap:0.5rem 2rem; }
+  .mm { display:flex; justify-content:space-between; gap:1rem; padding:0.5rem 0; border-bottom:1px solid rgba(0,0,0,0.06); font-size:13px; }
+  .mm .n { color:var(--black); font-weight:600; }
+  .mm .p { color:var(--green); font-weight:900; white-space:nowrap; }
+  .cat-note { font-size:11.5px; font-style:italic; color:rgba(0,0,0,0.45); margin-top:0.75rem; }
+  .menu-cta { text-align:center; padding: 2.5rem 2rem 4rem; }
+  @media (max-width:600px){ .menu-mini{ grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
@@ -354,50 +373,215 @@
   </div>
 </header>
 
-<!-- MENU HERO -->
 <section class="menu-hero">
   <div class="hero-eye">Open seven days · The Commons, Casuarina</div>
   <h1>The <span>Menu</span></h1>
-  <p>A few of the regulars below. The full list is longer — and so’s the queue at 9. Order ahead on me&amp;u or just walk in.</p>
+  <p>Breakfast, all-day brunch, lunch and everything to drink. Order ahead on me&amp;u or just walk in.</p>
+  <a href="https://www.meandu.app/tucker/pickup" class="btn-orange">Order Pickup Online →</a>
 </section>
-
+<div class="menu-hours"><strong>Mon–Fri</strong> Coffee 6am–2pm · Food 7am–1:30pm &nbsp;·&nbsp; <strong>Sat–Sun</strong> Coffee 7am–2pm · Food 7am–1:30pm</div>
+<nav class="menu-jump"><div class="menu-jump-inner">
+  <a href="#breakfast">Breakfast</a><a href="#brunch">Brunch</a><a href="#sides">Sides</a><a href="#lunch">Lunch</a><a href="#kids">Little Tucker</a><a href="#coffee">Coffee</a><a href="#juice">Juice</a><a href="#cold">Cold Drinks</a><a href="#iced">Iced</a><a href="#tea">Tea</a><a href="#smoothies">Smoothies</a>
+</div></nav>
+<div class="menu-legend"><b>Dietary</b>
+  <span><span class="diet v">V</span> Vegetarian</span>
+  <span><span class="diet ve">VE</span> Vegan</span>
+  <span><span class="diet gf">GF</span> Gluten free</span>
+  <span><span class="diet df">DF</span> Dairy free</span>
+</div>
 <div class="menu-wrap">
-  <div class="menu-cat">
-    <div class="menu-cat-h">Brunch favourites</div>
+  <div class="menu-cat" id="breakfast">
+    <div class="menu-cat-h"><span class="h">Breakfast</span><span class="when">Open – 11.00</span></div>
       <div class="menu-item">
-        <div><div class="mi-name">Green Eggs</div><div class="mi-desc">Seasonal greens, hummus, poached eggs, salsa verde. The one on everyone’s feed.</div></div>
+        <div><div class="mi-name">Baked Goods<span class="diet v">V</span></div><div class="mi-desc">sourdough fruit toast, croissant or banana bread w seasonal condiments</div></div>
+        <div class="mi-price">11.5</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Bacon Butty</div><div class="mi-desc">free range bacon, HP sauce, on a buttered milk bun</div></div>
+        <div class="mi-price">15.5</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Halloumi Roll<span class="diet v">V</span></div><div class="mi-desc">Byron Bay halloumi, spinach, chunky avo, fried egg, house relish & aioli on a milk bun</div></div>
+        <div class="mi-price">17.5</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Brekkie Roll</div><div class="mi-desc">bacon, swiss cheese, fried egg & house relish on a milk bun</div></div>
+        <div class="mi-price">17.5</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Chunky Avocado<span class="diet v">V</span></div><div class="mi-desc">chunky avocado, persian fetta, coriander & chilli flakes on sourdough</div></div>
+        <div class="mi-price">18</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Pancakes<span class="diet v">V</span></div><div class="mi-desc">berry compote, canadian maple</div></div>
+        <div class="mi-price">23.5</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Porridge</div><div class="mi-desc">oat & chia porridge, almond crumble, berry compote, rhubarb gel</div></div>
+        <div class="mi-price">19.5</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Eggs on Toast<span class="diet v">V</span></div><div class="mi-desc">poached, fried or scrambled egg / sourdough & house relish · scrambled +2</div></div>
+        <div class="mi-price">15.5</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Big Tucker</div><div class="mi-desc">bacon, avocado, herb rosti, roast tomato, lamb sausage, mushrooms, house relish + eggs of your choice on sourdough</div></div>
+        <div class="mi-price">36</div>
+      </div><div class="cat-note">Respectfully, we don’t allow menu substitutions — thank you.</div>
+  </div>
+  <div class="menu-cat" id="brunch">
+    <div class="menu-cat-h"><span class="h">Brunch</span><span class="when">All day</span></div>
+      <div class="menu-item">
+        <div><div class="mi-name">Shroom Scramble<span class="diet v">V</span></div><div class="mi-desc">scrambled egg, pan-fried mushies, sourdough, housemade persian feta & chives, salsa verde</div></div>
+        <div class="mi-price">25</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Chorizo Scramble</div><div class="mi-desc">scrambled egg, pan-fried chorizo, red onion, nduja, coriander, chives, fermented chilli, chimichurri on sourdough</div></div>
+        <div class="mi-price">25</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Green Eggs<span class="diet v">V</span></div><div class="mi-desc">seasonal greens, hummus, spiced almonds, poached eggs & salsa verde on sourdough</div></div>
         <div class="mi-price">20.5</div>
       </div>      <div class="menu-item">
-        <div><div class="mi-name">Big Tucker</div><div class="mi-desc">Bacon, avo, herb rosti, lamb sausage, mushrooms, eggs. For when you skipped dinner.</div></div>
-        <div class="mi-price">36</div>
-      </div>      <div class="menu-item">
-        <div><div class="mi-name">Rosti Benedict</div><div class="mi-desc">Two herbed rostis, poached eggs, hollandaise, your pick on top. Do not share.</div></div>
+        <div><div class="mi-name">Rosti Benedict<span class="diet v">V</span><span class="diet gf">GF</span></div><div class="mi-desc">two herbed potato rostis, free range poached eggs & housemade hollandaise + your choice of topping · half serve 15</div><div class="mi-add">Toppings: bacon · mushrooms · chunky avo · halloumi · chorizo</div></div>
         <div class="mi-price">26.5</div>
-      </div>      <div class="menu-item">
-        <div><div class="mi-name">Shroom Scramble</div><div class="mi-desc">Scramble, pan-fried mushies, persian feta, salsa verde on sourdough.</div></div>
-        <div class="mi-price">25</div>
       </div>
   </div>
-  <div class="menu-cat">
-    <div class="menu-cat-h">Burgers &amp; bigger</div>
+  <div class="menu-cat" id="sides">
+    <div class="menu-cat-h"><span class="h">Sides & Add-ons</span></div>
+      <div class="menu-mini"><div class="mm"><span class="n">Greens & Hummus</span><span class="p">10</span></div><div class="mm"><span class="n">Grilled Fish</span><span class="p">12</span></div><div class="mm"><span class="n">Byron Bay Halloumi</span><span class="p">8</span></div><div class="mm"><span class="n">Hollandaise</span><span class="p">3</span></div><div class="mm"><span class="n">Free Range Bacon</span><span class="p">8</span></div><div class="mm"><span class="n">House Relish</span><span class="p">3</span></div><div class="mm"><span class="n">Free Range Chorizo</span><span class="p">8</span></div><div class="mm"><span class="n">Chili Sambal</span><span class="p">3</span></div><div class="mm"><span class="n">Mushroom & Thyme</span><span class="p">8</span></div><div class="mm"><span class="n">Citrus Hummus</span><span class="p">3</span></div><div class="mm"><span class="n">Gluten Free Bread</span><span class="p">+3</span></div><div class="mm"><span class="n">Avocado</span><span class="p">6</span></div><div class="mm"><span class="n">Falafel (3pc)</span><span class="p">6</span></div><div class="mm"><span class="n">Herbed Potato Rosti</span><span class="p">7</span></div><div class="mm"><span class="n">Hot Chips</span><span class="p">11</span></div></div>
+  </div>
+  <div class="menu-cat" id="lunch">
+    <div class="menu-cat-h"><span class="h">Lunch</span><span class="when">10.30 – Close</span></div>
       <div class="menu-item">
-        <div><div class="mi-name">The Burgster</div><div class="mi-desc">Wagyu patty, swiss, le mac sauce, milk bun. Add chips, obviously.</div></div>
+        <div><div class="mi-name">Kimchi Fried Rice</div><div class="mi-desc">housemade kimchi, gochujang, stir-fried veg, shoyu, sesame oil, coriander & chilli, fried egg</div><div class="mi-add">ADD: avo 6 · chicken tenders 6.5</div></div>
         <div class="mi-price">19.5</div>
       </div>      <div class="menu-item">
-        <div><div class="mi-name">TFC Burger</div><div class="mi-desc">Tucker fried chicken, slaw, aged cheddar, chipotle aioli, milk bun.</div></div>
+        <div><div class="mi-name">The Burgster</div><div class="mi-desc">wagyu beef patty, swiss cheese, lettuce, onion, tomato, le mac sauce on a milk bun</div><div class="mi-add">ADD: chips 5 · tabasco maple bacon 4 · extra patty 7.5</div></div>
+        <div class="mi-price">19.5</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">TFC Burger</div><div class="mi-desc">Tucker fried chicken, pickled cabbage slaw, aged cheddar, lettuce, chipotle aioli on a milk bun</div><div class="mi-add">ADD: chips 5</div></div>
         <div class="mi-price">18.5</div>
       </div>      <div class="menu-item">
-        <div><div class="mi-name">Kimchi Fried Rice</div><div class="mi-desc">Housemade kimchi, gochujang, stir-fried veg, fried egg. Add chicken tenders.</div></div>
-        <div class="mi-price">19.5</div>
+        <div><div class="mi-name">Fish Burger</div><div class="mi-desc">beer battered fish, tartare sauce, lettuce, pickled gherkins & shallots</div><div class="mi-add">ADD: chips 5</div></div>
+        <div class="mi-price">21.5</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Fish & Chips</div><div class="mi-desc">sustainably caught beer battered fish, thick-cut chips, poor man’s tartare</div></div>
+        <div class="mi-price">27</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Grilled Fish & Greens<span class="diet gf">GF</span><span class="diet df">DF</span></div><div class="mi-desc">sustainably caught fish, asparagus, broccolini, baby spinach, citrus dressing</div></div>
+        <div class="mi-price">27</div>
+      </div>
+  </div>
+  <div class="menu-cat" id="kids">
+    <div class="menu-cat-h"><span class="h">Little Tucker</span><span class="when">Under 12s only</span></div>
+      <div class="menu-item">
+        <div><div class="mi-name">Egg on Toast<span class="diet v">V</span></div><div class="mi-desc">fried, poached or scrambled egg & sourdough</div></div>
+        <div class="mi-price">8</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Avocado on Toast<span class="diet v">V</span><span class="diet ve">VE</span></div></div>
+        <div class="mi-price">10</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Kids Pancakes<span class="diet v">V</span></div><div class="mi-desc">with maple syrup</div></div>
+        <div class="mi-price">12</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Fried Chicken Bites</div><div class="mi-desc">with chips</div></div>
+        <div class="mi-price">13.5</div>
+      </div>
+  </div>
+  <div class="menu-cat" id="coffee">
+    <div class="menu-cat-h"><span class="h">Coffee</span></div>
+      <div class="menu-item">
+        <div><div class="mi-name">Loma Coffee</div><div class="mi-desc">6oz 6 · 12oz 7</div></div>
+        <div class="mi-price">6 / 7</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Filter Brew</div></div>
+        <div class="mi-price">7.5</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Cold Brew</div></div>
+        <div class="mi-price">8</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Alternative Milks</div><div class="mi-desc">bonsoy, almond, oat, coconut, lactose free</div></div>
+        <div class="mi-price">+1</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Extra shot · decaf · mocha</div></div>
+        <div class="mi-price">+.75</div>
+      </div>
+  </div>
+  <div class="menu-cat" id="juice">
+    <div class="menu-cat-h"><span class="h">Cold Pressed Juice</span></div>
+      <div class="menu-item">
+        <div><div class="mi-name">Roots<span class="diet ve">VE</span></div><div class="mi-desc">beetroot, apple, lemon & ginger</div></div>
+        <div class="mi-price">9.5</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Orange Juice<span class="diet ve">VE</span></div><div class="mi-desc">freshly squeezed</div></div>
+        <div class="mi-price">9</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Antiox<span class="diet ve">VE</span></div><div class="mi-desc">apple, passionfruit, rhubarb & raspberry</div></div>
+        <div class="mi-price">9.5</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Tropical<span class="diet ve">VE</span></div><div class="mi-desc">orange, mango, passionfruit & lucuma</div></div>
+        <div class="mi-price">9.5</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Blueberry<span class="diet ve">VE</span></div><div class="mi-desc">blueberry, pear, coconut & aloe vera</div></div>
+        <div class="mi-price">9.5</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Refresh</div><div class="mi-desc">mandarin, hibiscus with probiotics & peptides</div></div>
+        <div class="mi-price">9.5</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Energise<span class="diet ve">VE</span></div><div class="mi-desc">pineapple, cucumber, spinach, lettuce, silverbeet, lime & mint</div></div>
+        <div class="mi-price">9.5</div>
+      </div><div class="cat-note">All juice made in house.</div>
+  </div>
+  <div class="menu-cat" id="cold">
+    <div class="menu-cat-h"><span class="h">Cold Drinks</span></div>
+      <div class="menu-mini"><div class="mm"><span class="n">Organic Cola</span><span class="p">6.5</span></div><div class="mm"><span class="n">Organic Blood Orange Soda</span><span class="p">6.5</span></div><div class="mm"><span class="n">Organic Ginger Beer</span><span class="p">6.5</span></div><div class="mm"><span class="n">Lemon & Mint Iced Tea</span><span class="p">8.5</span></div><div class="mm"><span class="n">Old Fashioned Lemonade</span><span class="p">8.5</span></div><div class="mm"><span class="n">Kombucha</span><span class="p">7.5</span></div></div>
+  </div>
+  <div class="menu-cat" id="iced">
+    <div class="menu-cat-h"><span class="h">Iced Specialties</span></div>
+      <div class="menu-item">
+        <div><div class="mi-name">Cold Brew w/ Pistachio & Sea Salt Foam</div></div>
+        <div class="mi-price">12</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Iced Matcha w/ Strawberry Foam</div></div>
+        <div class="mi-price">12</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Iced Matcha</div></div>
+        <div class="mi-price">8.5</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Coco Matcha</div><div class="mi-desc">coconut water, matcha foam</div></div>
+        <div class="mi-price">9</div>
+      </div>
+  </div>
+  <div class="menu-cat" id="tea">
+    <div class="menu-cat-h"><span class="h">Tea & House Brews</span></div>
+      <div class="menu-item">
+        <div><div class="mi-name">Tea</div><div class="mi-desc">english breakfast · earl grey · peppermint & cacao · lemongrass · green sencha & rose · chamomile</div></div>
+        <div class="mi-price">6.5</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Lemon, Honey & Ginger Brew</div><div class="mi-desc">hot or cold</div></div>
+        <div class="mi-price">8</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Powder Chai</div></div>
+        <div class="mi-price">7.5</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Sticky Chai</div></div>
+        <div class="mi-price">8.5</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Turmeric Latte</div></div>
+        <div class="mi-price">7.5</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Organic Hot Chocolate</div></div>
+        <div class="mi-price">8</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Organic “Ceremonial” Matcha</div></div>
+        <div class="mi-price">9</div>
+      </div>
+  </div>
+  <div class="menu-cat" id="smoothies">
+    <div class="menu-cat-h"><span class="h">Smoothies</span></div>
+      <div class="menu-item">
+        <div><div class="mi-name">Acai<span class="diet ve">VE</span></div><div class="mi-desc">acai, blueberry, banana & coconut water</div></div>
+        <div class="mi-price">12.5</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Green & Gold<span class="diet ve">VE</span></div><div class="mi-desc">mango, pineapple, dates, spinach, mint, ginger & coconut water</div></div>
+        <div class="mi-price">12.5</div>
+      </div>      <div class="menu-item">
+        <div><div class="mi-name">Big Banana<span class="diet ve">VE</span></div><div class="mi-desc">banana, cocoa, almond, himalayan salt, dates & coconut milk</div></div>
+        <div class="mi-price">12.5</div>
       </div>
   </div>
 </div>
-
-<div class="menu-note">
-  <strong>Please note</strong><br>
-  This is a selection of favourites — the full menu, specials and dietaries are on me&amp;u and in-store. Prices in AUD and may change. Coffee service starts before the kitchen opens.
-</div>
-
 <div class="menu-cta">
   <a href="https://www.meandu.app/tucker/pickup" class="btn-orange">Order Ahead on me&amp;u →</a>
 </div>
