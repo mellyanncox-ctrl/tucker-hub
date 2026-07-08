@@ -221,5 +221,53 @@ document.querySelectorAll('.carousel').forEach(function(c){
   });
 });
 </script>
+<!-- tse-week-status: auto-classifies weeks by date on load; self-maintaining, safe to keep -->
+<script>
+(function(){
+  var MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var DOW=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  function parseWeek(u){var m=u&&u.match(/weeks\/(\d{4})-(\d{2})-(\d{2})/);if(!m)return null;return new Date(+m[1],+m[2]-1,+m[3]);}
+  function monday(d){var x=new Date(d.getFullYear(),d.getMonth(),d.getDate());var o=(x.getDay()+6)%7;x.setDate(x.getDate()-o);return x;}
+  function key(d){return d.getFullYear()*10000+d.getMonth()*100+d.getDate();}
+  var tk=key(monday(new Date()));
+  function status(d){var k=key(monday(d));return k<tk?'Past':(k===tk?'Current':'Upcoming');}
+  function longLabel(d){return DOW[d.getDay()]+' '+d.getDate()+' '+MONTHS[d.getMonth()]+' '+d.getFullYear();}
+  try{
+    document.querySelectorAll('.sb-link').forEach(function(a){
+      var wd=parseWeek(a.getAttribute('href'));if(!wd)return;
+      var pill=a.querySelector('.sb-pill');if(!pill)return;
+      var st=status(wd);pill.textContent=st;pill.classList.toggle('cur',st==='Current');
+    });
+  }catch(e){}
+  try{
+    var cc=document.querySelector('.current-card');
+    var heroWrap=cc?cc.closest('a'):null;
+    var grids=document.querySelectorAll('.upcoming-grid');
+    if(heroWrap && grids.length>=1){
+      var seen={},weeks=[];
+      document.querySelectorAll('a[href*="/weeks/"]').forEach(function(a){
+        var wd=parseWeek(a.getAttribute('href'));if(!wd)return;var k=key(wd);if(seen[k])return;seen[k]=1;
+        weeks.push({d:wd,href:a.getAttribute('href')});
+      });
+      weeks.sort(function(a,b){return key(a.d)-key(b.d);});
+      var current=null,past=[],up=[];
+      weeks.forEach(function(w){var st=status(w.d);if(st==='Current')current=w;else if(st==='Past')past.push(w);else up.push(w);});
+      if(!current && up.length)current=up.shift();
+      if(current){
+        heroWrap.setAttribute('href',current.href);
+        var h3=heroWrap.querySelector('h3');if(h3)h3.textContent='Week of '+current.d.getDate()+' '+MONTHS[current.d.getMonth()]+' '+current.d.getFullYear();
+      }
+      function cell(w,l){return '<a class="up-cell" href="'+w.href+'"><div class="d">'+longLabel(w.d)+'</div><div class="s">'+l+'</div></a>';}
+      var pastGrid=grids[0],upGrid=grids[1]||null;
+      if(upGrid){
+        pastGrid.innerHTML=past.length?past.map(function(w){return cell(w,'Past week');}).join(''):'<div class="empty">No past weeks yet.</div>';
+        upGrid.innerHTML=up.length?up.map(function(w){return cell(w,'Awaiting plan');}).join(''):'<div class="empty">No upcoming weeks scheduled.</div>';
+        var us=upGrid.closest('.section');if(us){var c=us.querySelector('.sec-num .count');if(c)c.textContent=up.length+' scheduled';}
+      }
+    }
+  }catch(e){}
+})();
+</script>
+
 </body>
 </html>
