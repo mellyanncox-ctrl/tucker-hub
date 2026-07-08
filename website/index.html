@@ -3,13 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tucker Casuarina Marketing Plan Hub</title>
+<title>New Website | Tucker Casuarina Marketing Plan</title>
 <link rel="manifest" href="https://mellyanncox-ctrl.github.io/tucker-hub/manifest.json">
 <link rel="apple-touch-icon" href="https://mellyanncox-ctrl.github.io/tucker-hub/apple-touch-icon.png">
 <link rel="icon" type="image/png" href="https://mellyanncox-ctrl.github.io/tucker-hub/icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="tucker-hub">
 <meta name="theme-color" content="#7a9f7e">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800&display=swap');
@@ -127,6 +125,31 @@ a{color:inherit;text-decoration:none}
 }
 @media(max-width:520px){.story-grid{grid-template-columns:1fr}}
 </style>
+
+<style>
+.steps{margin-top:4px}
+.step{display:flex;gap:16px;padding:18px 2px;border-bottom:1px solid var(--rule)}
+.step:last-child{border-bottom:none}
+.step .dot{flex-shrink:0;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;border:2px solid var(--rule);background:var(--white);color:var(--mid)}
+.step.done .dot{background:var(--green);border-color:var(--green);color:var(--cream)}
+.step.active .dot{background:var(--gold);border-color:var(--gold);color:var(--green-d)}
+.step .st-body{flex:1;min-width:0}
+.step .st-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:4px}
+.step .st-ttl{font-weight:600;font-size:16px}
+.step .st-pill{font-size:9px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;padding:3px 9px;border-radius:999px;background:var(--cream-d);color:var(--mid);white-space:nowrap}
+.step.done .st-pill{background:var(--green);color:var(--cream)}
+.step.active .st-pill{background:var(--gold);color:var(--green-d)}
+.step .st-desc{font-size:13.5px;color:var(--mid);line-height:1.55}
+.pbar{height:8px;border-radius:999px;background:var(--cream-d);overflow:hidden;margin:2px 0 26px}
+.pbar>span{display:block;height:100%;background:var(--green);border-radius:999px}
+.scope-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.scope-item{display:flex;gap:11px;align-items:flex-start;background:var(--white);border:1px solid var(--rule);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
+.scope-item .si-ico{color:var(--green);font-weight:800;margin-top:1px}
+.scope-item .si-ttl{font-weight:600;font-size:14px;margin-bottom:2px}
+.scope-item .si-sub{font-size:12px;color:var(--mid);line-height:1.4}
+.cc-go.ghost{background:rgba(250,248,244,.18);color:var(--cream);border:1px solid rgba(250,248,244,.4)}
+@media(max-width:860px){.scope-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <aside class="sidebar">
@@ -134,94 +157,106 @@ a{color:inherit;text-decoration:none}
   <div class="sb-brand">Tucker</div>
   <div class="sb-tag">Casuarina</div>
   <div class="sb-group">Overview</div>
-  <a class="sb-link active" href="https://mellyanncox-ctrl.github.io/tucker-hub/index.html"><span>Home</span><span class="sb-pill">All weeks</span></a>
-  <a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/website/index.html"><span>Website</span><span class="sb-pill">Build</span></a>
+  <a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/index.html"><span>Home</span><span class="sb-pill">All weeks</span></a>
+  <a class="sb-link active" href="https://mellyanncox-ctrl.github.io/tucker-hub/website/index.html"><span>Website</span><span class="sb-pill cur">Build</span></a>
   <div class="sb-group">Plan weeks</div>
-  <a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-05-18/index.html"><span>18 May</span><span class="sb-pill">Past</span></a><a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-05-25/index.html"><span>25 May</span><span class="sb-pill">Past</span></a><a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-06-01/index.html"><span>1 Jun</span><span class="sb-pill">Past</span></a><a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-06-08/index.html"><span>8 Jun</span><span class="sb-pill cur">Current</span></a><a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-06-15/index.html"><span>15 Jun</span><span class="sb-pill">Upcoming</span></a><a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-06-22/index.html"><span>22 Jun</span><span class="sb-pill">Upcoming</span></a><a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-06-29/index.html"><span>29 Jun</span><span class="sb-pill">Upcoming</span></a><a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-07-06/index.html"><span>6 Jul</span><span class="sb-pill">Upcoming</span></a>
+  <a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-05-18/index.html"><span>18 May</span><span class="sb-pill">Upcoming</span></a><a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-05-25/index.html"><span>25 May</span><span class="sb-pill">Upcoming</span></a><a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-06-01/index.html"><span>1 Jun</span><span class="sb-pill">Upcoming</span></a><a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-06-08/index.html"><span>8 Jun</span><span class="sb-pill">Upcoming</span></a><a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-06-15/index.html"><span>15 Jun</span><span class="sb-pill">Upcoming</span></a><a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-06-22/index.html"><span>22 Jun</span><span class="sb-pill">Upcoming</span></a><a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-06-29/index.html"><span>29 Jun</span><span class="sb-pill">Upcoming</span></a><a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-07-06/index.html"><span>6 Jul</span><span class="sb-pill">Upcoming</span></a><a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-07-13/index.html"><span>13 Jul</span><span class="sb-pill">Upcoming</span></a><a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-07-20/index.html"><span>20 Jul</span><span class="sb-pill">Upcoming</span></a><a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-07-27/index.html"><span>27 Jul</span><span class="sb-pill">Upcoming</span></a><a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-08-03/index.html"><span>3 Aug</span><span class="sb-pill">Upcoming</span></a><a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-08-10/index.html"><span>10 Aug</span><span class="sb-pill">Upcoming</span></a><a class="sb-link " href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-08-17/index.html"><span>17 Aug</span><span class="sb-pill">Upcoming</span></a>
 </aside>
 <main class="main"><div class="wrap">
 <section class="hero">
-  <div class="eyebrow">Marketing plan hub</div>
-  <h1>Hey Phil and Dale — <em>here's the plan for the week.</em></h1>
-  <p class="lede">Each week you'll find two to three Instagram posts, six Instagram stories, and any other updates. Open the current week below to review and approve.</p>
+  <div class="eyebrow">Website project</div>
+  <h1>Your new <em>Tucker</em> website</h1>
+  <p class="lede">A fresh, mobile-first site built in your brand. Here’s where the build is up to — follow along, preview progress and sign off each stage as we go.</p>
+  <div class="meta-row">
+    <div><div class="m-lbl">Built by</div><div class="m-val">The Service Edit</div></div>
+    <div><div class="m-lbl">Status</div><div class="m-val"><span class="status-dot"></span>In design</div></div>
+    <div><div class="m-lbl">Target launch</div><div class="m-val tbc">To confirm</div></div>
+  </div>
 </section>
 
 <section class="section">
-  <div class="sec-num">01<span class="line"></span><span class="count">Review now</span></div>
-  <a href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-06-08/index.html" style="display:block">
+  <div class="sec-num">01<span class="line"></span><span class="count">Stage 2 of 4</span></div>
+  <h2>Build progress</h2>
+  <div class="pbar"><span style="width:38%"></span></div>
+  <div class="steps">
+    <div class="step done">
+      <div class="dot">✓</div>
+      <div class="st-body">
+        <div class="st-top"><div class="st-ttl">Discovery & content</div><div class="st-pill">Complete</div></div>
+        <div class="st-desc">Goals, pages and the content we need pulled together — menus, photos, opening hours, booking flow.</div>
+      </div>
+    </div>
+    <div class="step active">
+      <div class="dot">2</div>
+      <div class="st-body">
+        <div class="st-top"><div class="st-ttl">Design & layout</div><div class="st-pill">In progress</div></div>
+        <div class="st-desc">Building the look and feel in Tucker’s brand — League Spartan, sage, apricot and lilac. First draft coming for your review.</div>
+      </div>
+    </div>
+    <div class="step ">
+      <div class="dot">3</div>
+      <div class="st-body">
+        <div class="st-top"><div class="st-ttl">Build & content load</div><div class="st-pill">Upcoming</div></div>
+        <div class="st-desc">Turning the approved design into the live pages and loading all the real content.</div>
+      </div>
+    </div>
+    <div class="step ">
+      <div class="dot">4</div>
+      <div class="st-body">
+        <div class="st-top"><div class="st-ttl">Review & launch</div><div class="st-pill">Upcoming</div></div>
+        <div class="st-desc">Final checks on mobile and desktop, then we point the domain and go live.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="sec-num">02<span class="line"></span><span class="count">Preview</span></div>
+  <h2>See it come together</h2>
+  <a href="#" style="display:block;pointer-events:none">
     <div class="current-card">
-      <div class="cc-eyebrow">Current week</div>
-      <h3>Week of 8 June 2026</h3>
-      <p>Open this week's plan to review the Instagram posts, stories and any other updates scheduled for the next seven days.</p>
-      <span class="cc-go">Open this week's plan →</span>
+      <div class="cc-eyebrow">Live preview</div>
+      <h3>First draft coming soon</h3>
+      <p>Once the design is ready, a private preview link will appear right here so you can click through the new site on any device before it goes live.</p>
+      <span class="cc-go ghost">Preview link coming soon</span>
     </div>
   </a>
+  <div class="signoff-lbl">Design sign-off</div>
+  <div class="signoff">
+    <a class="btn btn-changes" href="mailto:hello@theserviceedit.com?subject=New%20Tucker%20website%20%7C%20Design%20%7C%20Request%20changes&body=Hi%20Mel,%0A%0ARe:%20the%20new%20Tucker%20website%0A%0A">Request changes</a>
+    <a class="btn btn-approve" href="mailto:hello@theserviceedit.com?subject=New%20Tucker%20website%20%7C%20Design%20%7C%20Approve&body=Hi%20Mel,%0A%0ARe:%20the%20new%20Tucker%20website%0A%0A">Approve</a>
+  </div>
 </section>
 
 <section class="section">
-  <div class="sec-num">02<span class="line"></span><span class="count">Archive</span></div>
-  <h2>Past weeks</h2>
-  <div class="upcoming-grid"><a class="up-cell" href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-05-18/index.html"><div class="d">Mon 18 May 2026</div><div class="s">Past week</div></a><a class="up-cell" href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-05-25/index.html"><div class="d">Mon 25 May 2026</div><div class="s">Past week</div></a><a class="up-cell" href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-06-01/index.html"><div class="d">Mon 1 June 2026</div><div class="s">Past week</div></a></div>
+  <div class="sec-num">03<span class="line"></span><span class="count">What’s included</span></div>
+  <h2>Pages &amp; scope</h2>
+  <div class="scope-grid">
+    <div class="scope-item"><div class="si-ico">→</div><div><div class="si-ttl">Home</div><div class="si-sub">Warm first impression, hours, location, quick links to menu & booking.</div></div></div>
+    <div class="scope-item"><div class="si-ico">→</div><div><div class="si-ttl">Menu</div><div class="si-sub">Full food & drink menu, easy to update — including the cold-pressed juice range.</div></div></div>
+    <div class="scope-item"><div class="si-ico">→</div><div><div class="si-ttl">Our story</div><div class="si-sub">About Tucker Casuarina, the team and the space.</div></div></div>
+    <div class="scope-item"><div class="si-ico">→</div><div><div class="si-ttl">Bookings & contact</div><div class="si-sub">Clear call-to-action to book a table or get in touch.</div></div></div>
+    <div class="scope-item"><div class="si-ico">→</div><div><div class="si-ttl">Gallery</div><div class="si-sub">A curated set of photos showing the food, fitout and atmosphere.</div></div></div>
+    <div class="scope-item"><div class="si-ico">→</div><div><div class="si-ttl">Mobile-first</div><div class="si-sub">Designed for phones first — most customers will find you there.</div></div></div>
+  </div>
 </section>
 
 <section class="section">
-  <div class="sec-num">03<span class="line"></span><span class="count">10 scheduled</span></div>
-  <h2>Upcoming weeks</h2>
-  <div class="upcoming-grid"><a class="up-cell" href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-06-15/index.html"><div class="d">Mon 15 June 2026</div><div class="s">Awaiting plan</div></a><a class="up-cell" href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-06-22/index.html"><div class="d">Mon 22 June 2026</div><div class="s">Awaiting plan</div></a><a class="up-cell" href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-06-29/index.html"><div class="d">Mon 29 June 2026</div><div class="s">Awaiting plan</div></a><a class="up-cell" href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-07-06/index.html"><div class="d">Mon 6 July 2026</div><div class="s">Awaiting plan</div></a><a class="up-cell" href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-07-13/index.html"><div class="d">Mon 13 July 2026</div><div class="s">Awaiting plan</div></a><a class="up-cell" href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-07-20/index.html"><div class="d">Mon 20 July 2026</div><div class="s">Awaiting plan</div></a><a class="up-cell" href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-07-27/index.html"><div class="d">Mon 27 July 2026</div><div class="s">Awaiting plan</div></a><a class="up-cell" href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-08-03/index.html"><div class="d">Mon 3 August 2026</div><div class="s">Awaiting plan</div></a><a class="up-cell" href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-08-10/index.html"><div class="d">Mon 10 August 2026</div><div class="s">Awaiting plan</div></a><a class="up-cell" href="https://mellyanncox-ctrl.github.io/tucker-hub/weeks/2026-08-17/index.html"><div class="d">Mon 17 August 2026</div><div class="s">Awaiting plan</div></a></div>
+  <div class="sec-num">04<span class="line"></span><span class="count">Notes</span></div>
+  <h2>Anything to add?</h2>
+  <div class="card"><div class="card-head"><div class="ttl">Your input</div><span class="tag web">Website</span></div>
+  <div class="card-body">
+    <div class="fld"><div class="k">Domain</div><div class="v tbc">To confirm — keep current domain or register a new one?</div></div>
+    <div class="fld"><div class="k">Must-haves</div><div class="v tbc">To confirm — anything essential the site needs to do?</div></div>
+    <div class="fld"><div class="k">Sites you like</div><div class="v tbc">To confirm — share any examples for inspiration.</div></div>
+  </div></div>
+  <div class="signoff-lbl">Scope & notes sign-off</div>
+  <div class="signoff">
+    <a class="btn btn-changes" href="mailto:hello@theserviceedit.com?subject=New%20Tucker%20website%20%7C%20Scope & notes%20%7C%20Request%20changes&body=Hi%20Mel,%0A%0ARe:%20the%20new%20Tucker%20website%0A%0A">Request changes</a>
+    <a class="btn btn-approve" href="mailto:hello@theserviceedit.com?subject=New%20Tucker%20website%20%7C%20Scope & notes%20%7C%20Approve&body=Hi%20Mel,%0A%0ARe:%20the%20new%20Tucker%20website%0A%0A">Approve</a>
+  </div>
 </section>
 </div></main>
-<script>
-function imgExists(src){return new Promise(function(res){var im=new Image();im.onload=function(){res(true);};im.onerror=function(){res(false);};im.src=src;});}
-(async function(){
-  var anyPost=false;
-  var cards=document.querySelectorAll('.post-card');
-  for(var ci=0; ci<cards.length; ci++){
-    var card=cards[ci],carousel=card.querySelector('.carousel'),track=carousel.querySelector('.ctrack');
-    var slides=Array.prototype.slice.call(track.querySelectorAll('.cslide'));
-    var present=[];
-    for(var si=0; si<slides.length; si++){
-      var src=slides[si].getAttribute('data-img');
-      var ok=await imgExists(src);
-      if(ok){present.push(slides[si]);}else{slides[si].remove();}
-    }
-    if(present.length===0){ card.remove(); continue; }
-    anyPost=true; card.style.display='';
-    var dotArr=Array.prototype.slice.call(carousel.querySelectorAll('.cdot'));
-    for(var di=dotArr.length-1; di>=present.length; di--){ dotArr[di].remove(); }
-    var tag=card.querySelector('[data-tag]'),ccount=carousel.querySelector('.ccount');
-    var prev=carousel.querySelector('.prev'),next=carousel.querySelector('.next');
-    var dotsWrap=carousel.querySelector('.cdots'),dlrow=card.querySelector('[data-dlrow]');
-    if(present.length===1){
-      tag.textContent='Post';
-      if(prev)prev.remove(); if(next)next.remove();
-      if(dotsWrap)dotsWrap.remove(); if(ccount)ccount.remove();
-      var sd=present[0].querySelector('.slide-dl'); if(sd)sd.remove();
-      dlrow.innerHTML='<a class="dlbtn" href="'+present[0].getAttribute('data-img')+'" download>↓ Download image</a>';
-    } else {
-      tag.textContent='Carousel';
-      ccount.textContent='Carousel · '+present.length+' slides';
-      var html='';
-      for(var k=0;k<present.length;k++){
-        html+='<a class="dlbtn" href="'+present[k].getAttribute('data-img')+'" download>↓ Slide '+(k+1)+'</a>';
-      }
-      dlrow.innerHTML=html;
-    }
-  }
-  var np=document.getElementById('no-posts'); if(!anyPost && np){ np.style.display='block'; }
-})();
-document.querySelectorAll('.carousel').forEach(function(c){
-  var track=c.querySelector('.ctrack');
-  function go(dir){track.scrollBy({left:dir*track.clientWidth,behavior:'smooth'});}
-  var p=c.querySelector('.prev'),n=c.querySelector('.next');
-  if(p)p.addEventListener('click',function(){go(-1);});
-  if(n)n.addEventListener('click',function(){go(1);});
-  track.addEventListener('scroll',function(){
-    var dots=c.querySelectorAll('.cdot');
-    var idx=Math.round(track.scrollLeft/track.clientWidth);
-    dots.forEach(function(d,i){d.classList.toggle('on',i===idx);});
-  });
-});
-</script>
 <!-- tse-week-status: auto-classifies weeks by date on load; self-maintaining, safe to keep -->
 <script>
 (function(){
